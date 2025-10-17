@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
-import { User } from '../types';
-import * as api from '../services/firebase';
+import { User } from '../types/index.ts';
+import * as api from '../services/firebase.ts';
 
 export const useUsers = () => {
   const [users, setUsers] = useState<User[]>([]);

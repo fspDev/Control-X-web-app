@@ -1,12 +1,12 @@
 import React, { useState, useMemo } from 'react';
-import { useEvents } from '../hooks/useEvents';
-import { useNotes } from '../hooks/useNotes';
-import { Event } from '../types';
-import EventFormModal from '../components/events/EventFormModal';
-import { ChevronLeftIcon, ChevronRightIcon } from '../assets/icons';
-import { useUsers } from '../hooks/useUsers';
-import EventDetailModal from '../components/events/EventDetailModal';
-import DayDetailModal from '../components/ui/DayDetailModal';
+import { useEvents } from '../hooks/useEvents.ts';
+import { useNotes } from '../hooks/useNotes.ts';
+import { Event } from '../types/index.ts';
+import EventFormModal from '../components/events/EventFormModal.tsx';
+import { ChevronLeftIcon, ChevronRightIcon } from '../assets/icons.tsx';
+import { useUsers } from '../hooks/useUsers.ts';
+import EventDetailModal from '../components/events/EventDetailModal.tsx';
+import DayDetailModal from '../components/ui/DayDetailModal.tsx';
 
 // --- Date Helper Functions (no external dependencies) ---
 const startOfMonth = (date: Date) => new Date(date.getFullYear(), date.getMonth(), 1);

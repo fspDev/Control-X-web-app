@@ -1,4 +1,4 @@
-import { User, Event } from '../types';
+import { User, Event } from '../types/index.ts';
 
 // Extended internal user type for mock data, including password
 export interface MockUser extends User {

@@ -1,4 +1,4 @@
-import { auth, db } from '../firebaseConfig';
+import { auth, db } from '../firebaseConfig.ts';
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -26,7 +26,7 @@ import {
   QueryDocumentSnapshot,
 } from 'firebase/firestore';
 
-import { User, Event, Note } from '../types';
+import { User, Event, Note } from '../types/index.ts';
 
 // A dummy domain to append to usernames to make them valid emails for Firebase Auth.
 // This is not exposed to the end-user.

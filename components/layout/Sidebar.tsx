@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useAuth } from '../../hooks/useAuth';
-import { useSidebar } from '../../contexts/SidebarContext';
-import { CalendarIcon, DashboardIcon, TableIcon, AdminIcon, LogoutIcon, LogoIcon, ChevronDoubleLeftIcon } from '../../assets/icons';
+import { useAuth } from '../../hooks/useAuth.tsx';
+import { useSidebar } from '../../contexts/SidebarContext.tsx';
+import { CalendarIcon, DashboardIcon, TableIcon, AdminIcon, LogoutIcon, LogoIcon, ChevronDoubleLeftIcon } from '../../assets/icons.tsx';
 
 interface NavItemProps {
   to: string;

@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Event } from '../../types';
-import { useNote } from '../../hooks/useNote';
-import { useDebounce } from '../../hooks/useDebounce';
-import Modal from './Modal';
-import { PlusIcon } from '../../assets/icons';
+import { Event } from '../../types/index.ts';
+import { useNote } from '../../hooks/useNote.ts';
+import { useDebounce } from '../../hooks/useDebounce.ts';
+import Modal from './Modal.tsx';
+import { PlusIcon } from '../../assets/icons.tsx';
 
 interface DayDetailModalProps {
   isOpen: boolean;

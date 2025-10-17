@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
-import { useAuth } from '../hooks/useAuth';
-import { LogoIcon } from '../assets/icons';
+import { useAuth } from '../hooks/useAuth.tsx';
+import { LogoIcon } from '../assets/icons.tsx';
 
 const LoginPage: React.FC = () => {
   const { user, login } = useAuth();

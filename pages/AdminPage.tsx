@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Navigate } from 'react-router-dom';
-import { useAuth } from '../hooks/useAuth';
-import { useUsers } from '../hooks/useUsers';
-import { User } from '../types';
+import { useAuth } from '../hooks/useAuth.tsx';
+import { useUsers } from '../hooks/useUsers.ts';
+import { User } from '../types/index.ts';
 
-import NotionCard from '../components/ui/NotionCard';
-import Dropdown from '../components/ui/Dropdown';
-import UserFormModal from '../components/admin/UserFormModal';
-import ConfirmationModal from '../components/ui/ConfirmationModal';
-import { EllipsisVerticalIcon, PencilIcon, PlusIcon, TrashIcon } from '../assets/icons';
-import Avatar from '../components/ui/Avatar';
-import Skeleton from '../components/ui/Skeleton';
+import NotionCard from '../components/ui/NotionCard.tsx';
+import Dropdown from '../components/ui/Dropdown.tsx';
+import UserFormModal from '../components/admin/UserFormModal.tsx';
+import ConfirmationModal from '../components/ui/ConfirmationModal.tsx';
+import { EllipsisVerticalIcon, PencilIcon, PlusIcon, TrashIcon } from '../assets/icons.tsx';
+import Avatar from '../components/ui/Avatar.tsx';
+import Skeleton from '../components/ui/Skeleton.tsx';
 
 const AdminPage: React.FC = () => {
   const { user: currentUser } = useAuth();

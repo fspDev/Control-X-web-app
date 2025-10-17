@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { User } from '../../types';
-import Modal from '../ui/Modal';
+import { User } from '../../types/index.ts';
+import Modal from '../ui/Modal.tsx';
 
 interface UserFormModalProps {
   isOpen: boolean;

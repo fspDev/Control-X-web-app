@@ -1,15 +1,15 @@
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
-import { useSearch } from '../contexts/SearchContext';
-import { useUsers } from '../hooks/useUsers';
-import * as api from '../services/firebase';
-import NotionCard from '../components/ui/NotionCard';
-import Dropdown from '../components/ui/Dropdown';
-import ConfirmationModal from '../components/ui/ConfirmationModal';
-import EventFormModal from '../components/events/EventFormModal';
-import EventDetailModal from '../components/events/EventDetailModal';
-import { Event } from '../types';
-import { PlusIcon, EllipsisVerticalIcon, PencilIcon, TrashIcon, FilterIcon } from '../assets/icons';
-import Skeleton from '../components/ui/Skeleton';
+import { useSearch } from '../contexts/SearchContext.tsx';
+import { useUsers } from '../hooks/useUsers.ts';
+import * as api from '../services/firebase.ts';
+import NotionCard from '../components/ui/NotionCard.tsx';
+import Dropdown from '../components/ui/Dropdown.tsx';
+import ConfirmationModal from '../components/ui/ConfirmationModal.tsx';
+import EventFormModal from '../components/events/EventFormModal.tsx';
+import EventDetailModal from '../components/events/EventDetailModal.tsx';
+import { Event } from '../types/index.ts';
+import { PlusIcon, EllipsisVerticalIcon, PencilIcon, TrashIcon, FilterIcon } from '../assets/icons.tsx';
+import Skeleton from '../components/ui/Skeleton.tsx';
 import { DocumentData, QueryDocumentSnapshot } from 'firebase/firestore';
 
 

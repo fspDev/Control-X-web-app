@@ -1,7 +1,10 @@
 // src/firebaseConfig.ts
 // FIX: Combined Firebase app imports to resolve potential module resolution errors.
 // FIX: Removed the 'type' keyword from the combined import to resolve module resolution issues.
-import { initializeApp, FirebaseApp } from 'firebase/app';
+// FIX: Switched to Firebase compat library to resolve module errors for `initializeApp`. This is a robust solution when the installed Firebase SDK version might not be v9+.
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 import { getFirestore, Firestore } from 'firebase/firestore';
 import { getAuth, Auth } from 'firebase/auth';
 
@@ -26,14 +29,14 @@ export let isFirebaseConfigured = Object.values(firebaseConfig).every(
   value => typeof value === 'string' && value.length > 0 && !value.startsWith("TU_")
 );
 
-let app: FirebaseApp;
+let app: firebase.app.App;
 let db: Firestore;
 let auth: Auth;
 
 if (isFirebaseConfigured) {
   try {
     // Initialize Firebase only if configuration is valid
-    app = initializeApp(firebaseConfig);
+    app = firebase.initializeApp(firebaseConfig);
     db = getFirestore(app);
     auth = getAuth(app);
   } catch (e) {

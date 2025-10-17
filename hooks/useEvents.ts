@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Event } from '../types';
-import * as api from '../services/firebase';
-import { useAuth } from './useAuth';
+import { Event } from '../types/index.ts';
+import * as api from '../services/firebase.ts';
+import { useAuth } from './useAuth.tsx';
 
 export const useEvents = () => {
   const { user } = useAuth();

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Event, User } from '../../types';
-import Modal from '../ui/Modal';
-import { ClockIcon, MapPinIcon, UserCircleIcon, WrenchScrewdriverIcon, NotesIcon } from '../../assets/icons';
+import { Event, User } from '../../types/index.ts';
+import Modal from '../ui/Modal.tsx';
+import { ClockIcon, MapPinIcon, UserCircleIcon, WrenchScrewdriverIcon, NotesIcon } from '../../assets/icons.tsx';
 
 interface EventDetailModalProps {
   isOpen: boolean;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Event } from '../../types';
-import Modal from '../ui/Modal';
+import { Event } from '../../types/index.ts';
+import Modal from '../ui/Modal.tsx';
 
 interface EventFormModalProps {
   isOpen: boolean;

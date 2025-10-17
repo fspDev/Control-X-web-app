@@ -1,12 +1,12 @@
 import React, { useState, useMemo } from 'react';
-import { useEvents } from '../hooks/useEvents';
-import { useUsers } from '../hooks/useUsers';
-import NotionCard from '../components/ui/NotionCard';
-import { CalendarIcon } from '../assets/icons';
-import { Event } from '../types';
-import EventDetailModal from '../components/events/EventDetailModal';
-import EventFormModal from '../components/events/EventFormModal';
-import Skeleton from '../components/ui/Skeleton';
+import { useEvents } from '../hooks/useEvents.ts';
+import { useUsers } from '../hooks/useUsers.ts';
+import NotionCard from '../components/ui/NotionCard.tsx';
+import { CalendarIcon } from '../assets/icons.tsx';
+import { Event } from '../types/index.ts';
+import EventDetailModal from '../components/events/EventDetailModal.tsx';
+import EventFormModal from '../components/events/EventFormModal.tsx';
+import Skeleton from '../components/ui/Skeleton.tsx';
 
 const DashboardPage: React.FC = () => {
   const { events, isLoading, error, addEvent, updateEvent } = useEvents();

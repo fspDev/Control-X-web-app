@@ -1,8 +1,8 @@
 import React from 'react';
 import { Outlet, Navigate, useLocation } from 'react-router-dom';
-import Sidebar from './Sidebar';
-import Topbar from './Topbar';
-import { useAuth } from '../../hooks/useAuth';
+import Sidebar from './Sidebar.tsx';
+import Topbar from './Topbar.tsx';
+import { useAuth } from '../../hooks/useAuth.tsx';
 
 const MainLayout: React.FC = () => {
   const { user, loading } = useAuth();

@@ -1,8 +1,8 @@
 import React from 'react';
-import { useAuth } from '../../hooks/useAuth';
-import { useSearch } from '../../contexts/SearchContext';
-import { SearchIcon } from '../../assets/icons';
-import Avatar from '../ui/Avatar';
+import { useAuth } from '../../hooks/useAuth.tsx';
+import { useSearch } from '../../contexts/SearchContext.tsx';
+import { SearchIcon } from '../../assets/icons.tsx';
+import Avatar from '../ui/Avatar.tsx';
 
 const Topbar: React.FC = () => {
   const { user } = useAuth();

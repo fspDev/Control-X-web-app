@@ -1,18 +1,18 @@
 import React, { lazy, Suspense } from 'react';
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { ThemeProvider } from './hooks/useTheme';
-import { AuthProvider } from './hooks/useAuth';
-import { SearchProvider } from './contexts/SearchContext';
-import { SidebarProvider } from './contexts/SidebarContext';
-import { isFirebaseConfigured } from './firebaseConfig';
+import { ThemeProvider } from './hooks/useTheme.tsx';
+import { AuthProvider } from './hooks/useAuth.tsx';
+import { SearchProvider } from './contexts/SearchContext.tsx';
+import { SidebarProvider } from './contexts/SidebarContext.tsx';
+import { isFirebaseConfigured } from './firebaseConfig.ts';
 
 // --- Lazy Loaded Components ---
-const MainLayout = lazy(() => import('./components/layout/MainLayout'));
-const LoginPage = lazy(() => import('./pages/LoginPage'));
-const AdminPage = lazy(() => import('./pages/AdminPage'));
-const DashboardPage = lazy(() => import('./pages/DashboardPage'));
-const TableViewPage = lazy(() => import('./pages/TableViewPage'));
-const CalendarViewPage = lazy(() => import('./pages/CalendarViewPage'));
+const MainLayout = lazy(() => import('./components/layout/MainLayout.tsx'));
+const LoginPage = lazy(() => import('./pages/LoginPage.tsx'));
+const AdminPage = lazy(() => import('./pages/AdminPage.tsx'));
+const DashboardPage = lazy(() => import('./pages/DashboardPage.tsx'));
+const TableViewPage = lazy(() => import('./pages/TableViewPage.tsx'));
+const CalendarViewPage = lazy(() => import('./pages/CalendarViewPage.tsx'));
 
 const FullPageLoader: React.FC = () => (
   <div className="flex h-screen w-full items-center justify-center bg-notion-bg">

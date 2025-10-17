@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Note } from '../types';
-import * as api from '../services/firebase';
+import { Note } from '../types/index.ts';
+import * as api from '../services/firebase.ts';
 
 export const useNote = (date: string) => {
   const [note, setNote] = useState<Note | null>(null);
