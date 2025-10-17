@@ -1,7 +1,7 @@
 // src/firebaseConfig.ts
-// FIX: Split `initializeApp` and `FirebaseApp` into separate import statements to resolve module resolution errors.
-import { initializeApp } from 'firebase/app';
-import type { FirebaseApp } from 'firebase/app';
+// FIX: Combined Firebase app imports to resolve potential module resolution errors.
+// FIX: Removed the 'type' keyword from the combined import to resolve module resolution issues.
+import { initializeApp, FirebaseApp } from 'firebase/app';
 import { getFirestore, Firestore } from 'firebase/firestore';
 import { getAuth, Auth } from 'firebase/auth';
 
