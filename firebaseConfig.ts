@@ -1,12 +1,8 @@
 // src/firebaseConfig.ts
-// FIX: Combined Firebase app imports to resolve potential module resolution errors.
-// FIX: Removed the 'type' keyword from the combined import to resolve module resolution issues.
-// FIX: Switched to Firebase compat library to resolve module errors for `initializeApp`. This is a robust solution when the installed Firebase SDK version might not be v9+.
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
-import { getFirestore, Firestore } from 'firebase/firestore';
-import { getAuth, Auth } from 'firebase/auth';
+// FIX: (line 2) Changed to a namespace import to resolve module loading issues with 'firebase/app'.
+import * as firebaseApp from 'firebase/app';
+import { getAuth, type Auth } from 'firebase/auth';
+import { getFirestore, type Firestore } from 'firebase/firestore';
 
 // --- PASO 2: REEMPLAZA ESTO CON TUS CLAVES DE PRODUCCIÓN ---
 // Copia y pega aquí el objeto de configuración de tu NUEVO proyecto de Firebase (el de producción).
@@ -24,25 +20,23 @@ const firebaseConfig = {
 
 
 // Check if all required Firebase config values are present and valid strings
-// FIX: Changed to 'let' to allow reassignment in the catch block.
 export let isFirebaseConfigured = Object.values(firebaseConfig).every(
   value => typeof value === 'string' && value.length > 0 && !value.startsWith("TU_")
 );
 
-let app: firebase.app.App;
+let app: firebaseApp.FirebaseApp;
 let db: Firestore;
 let auth: Auth;
 
 if (isFirebaseConfigured) {
   try {
     // Initialize Firebase only if configuration is valid
-    app = firebase.initializeApp(firebaseConfig);
+    app = firebaseApp.initializeApp(firebaseConfig);
     db = getFirestore(app);
     auth = getAuth(app);
   } catch (e) {
     console.error("Firebase initialization failed:", e);
     // In case of initialization error, ensure the flag is false
-    // This is a safety net, though isFirebaseConfigured should prevent this.
     isFirebaseConfigured = false; 
   }
 } else {
