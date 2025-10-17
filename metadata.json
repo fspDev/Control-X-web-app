@@ -1,0 +1,5 @@
+{
+  "name": "Control X",
+  "description": "Una aplicación de calendario de eventos colaborativa con una estética similar a Notion. Esta aplicación permite a los usuarios gestionar eventos, tomar notas y colaborar en tiempo real. Cuenta con una interfaz limpia y minimalista con modos claro y oscuro.",
+  "requestFramePermissions": []
+}
